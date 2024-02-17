@@ -1,12 +1,21 @@
+---
 apiVersion: v1
 kind: Pod
 metadata:
   name: config-pod
 spec:
   containers:
-  - name: nginx
+  - name: ngin
     image: nginx
-    envFrom:
-    - configMapRef:
-        name: course-config
+    env:
+    - name: course
+      valueFrom:
+        configMapKeyRef:
+          name: course-config
+          key: course
+    - name: duration
+      valueFrom:
+        configMapKeyRef:
+          name: course-config
+          key: duration
       
