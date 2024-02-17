@@ -4,10 +4,10 @@ metadata:
   name: label-demo
   labels:
     course: docker
-    duration: 25
+    duration: 25hrs
 spec:
   containers:
-    - name: nginx
-      image: nginx
+  - name: nginx
+    image: nginx
       
 
